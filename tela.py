@@ -1,4 +1,5 @@
 import streamlit as st
+from funcao import *
 
 st.title("Tela do banco de dados :alien:")
 st.header("Sistema de produtos")

@@ -1,5 +1,6 @@
 import streamlit as st
 from funcao import cadastrar
+from funcao import atualizarpeco
 
 st.title("Tela do banco de dados :alien:")
 st.header("Sistema de produtos")
@@ -19,4 +20,16 @@ btncadastro = st.button("Cadastrar produto")
 if btncadastro:
     cadastrar(nome, preco, codigo, imagem)
     st.write("Cadastro feito com sucesso")
+
+st.markdown("----------------------------------------")
+st.write("Atualiação do valor")
+novo_valor = float(st.number_input("Digite o novo valor do produto: "))
+novo = st.text_input("Código do produto", placeholder="codigo do produto")
+
+btnatualizarpreco = st.button("Atualizar preço")
+
+if btnatualizarpreco:
+    atualizarpeco(novo_valor, codigo)
+    st.write("Preço atualizado")
+
 

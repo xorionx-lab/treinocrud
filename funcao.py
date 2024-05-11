@@ -33,7 +33,7 @@ def atualizarpeco(id: str, novo_valor: float):
 #Função listartodos
 
 def selecionarTodosProdutos():
-    conexao, cursor = conectarBd()
+    conexao, cursor = conectarbd()
     comando_sql = f'select id, nome, preco from produtos'
     cursor.execute(comando_sql)
     resultado_consulta = cursor.fetchall()

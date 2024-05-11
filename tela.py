@@ -68,3 +68,9 @@ containerUmProduto = col3.container(border=True)
 with containerUmProduto:
     containerUmProduto.markdown('## Listar um produto')
     codigoDoProduto = st.text_input('Codigo do produto a ser listado')
+
+    btnmostrar_produtos = st.button("mostrar item")
+
+    if btnmostrar_produtos:
+        listaProdutos(id)
+        st.write("mostrar")
